@@ -1,0 +1,27 @@
+
+<div class="form-group">
+<h1>Show Data</h1>
+<label for="fullname">fullname</label>
+<input type="text" name="fullname"  [(ngModel)]="Employee.fullname" class="form-control"> <br>
+<label for="hire_date">hire_date</label>
+<angular2-date-picker [(ngModel)]="Employee.hire_date" [settings]="settings"></angular2-date-picker> <br>
+<label for="email">email</label>
+<input name="email" type="email" [(ngModel)]="Employee.email" class="form-control"> <br>
+<label for="gender">gender</label>
+<form action="">
+  <input type="radio" name="gender" [(ngModel)]="Employee.gender" value="male">male <br>
+  <input type="radio" name="female" [(ngModel)]="Employee.gender" value="female">female <br>
+  <input type="radio" name="other" [(ngModel)]="Employee.gender" value="other">other <br>
+</form>
+
+<label for="salary">salary</label>
+<input name="salary" type="number" [(ngModel)]="Employee.salary" class="form-control"> <br>
+<label for="cnic">cnic</label>
+<input cnic="cnic" type="string" [(ngModel)]="Employee.cnic" class="form-control"> <br>
+<label for="job_id">job_id</label>
+<input name="job_id" type="number" [(ngModel)]="Employee.job_id" class="form-control"> <br>
+<label for="phone_no">phone_no</label>
+<input name="phone_no" type="number" [(ngModel)]="Employee.phone_no" class="form-control"> <br>
+
+<button (click)="createEmployee()">Submit</button>
+</div> 

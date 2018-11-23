@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>car_type</th>
+            <th>color</th>
+            <th>model</th>
+            <th>engine_no</th>
+            <th>chassis_no</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" >
+            <td>{{user.car_type}}</td>
+            <td>{{user.color}}</td>
+            <td>{{user.model}}</td>
+            <td>{{user.engine_no}}</td>
+            <td>{{user.chassis_no}}</td>
+            
+        </tr>
+    </tbody>
+</table>

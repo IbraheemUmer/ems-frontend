@@ -1,0 +1,41 @@
+<input type="email" name="email" [(ngModel)]="email">
+<button (click)="showemployee()">search</button><br>
+<input type="text" name="fullname" [(ngModel)]="fullname">
+<button (click)="showemployee()">search</button><br>
+<input type="number" name="salary" [(ngModel)]="salary">
+<button (click)="showemployee()">search</button>
+<div class="container">
+<table>
+  <thead>
+      <tr>
+          <th>fullname</th>
+          <th>hire_date</th>
+          <th>email</th>
+          <th>gender</th>
+          <th>salary</th>
+          <th>cnic</th>
+          <th>job_id</th>
+          <th>phone_no</th>
+          <th>update</th>
+          <th>delete</th>
+         
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of users;let i=index" >
+          <td><input type="text" name="fullname" [(ngModel)]=user.fullname></td>
+          <td><angular2-date-picker [(ngModel)]="user.hire_date" [settings]="settings"></angular2-date-picker></td>
+          <td><input type="email" name="email" [(ngModel)]=user.email></td>
+          <td><input type="string" name="gender" [(ngModel)]=user.gender></td>
+          <td><input type="number" name="salary" [(ngModel)]=user.salary></td>
+          <td><input type="string" name="cnic" [(ngModel)]=user.cnic></td>
+          <td><input type="number" name="job_id" [(ngModel)]=user.job_id></td>
+          <td><input type="number" name="phone_no" [(ngModel)]=user.phone_no></td>
+          <td><button (click)="updateemployee(i)">update</button></td>
+          <td><button (click)="destroyemployee(i)">delete</button></td>
+          
+      </tr>
+  </tbody>
+</table>
+</div>
+ 

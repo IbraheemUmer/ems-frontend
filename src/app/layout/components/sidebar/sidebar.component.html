@@ -4,6 +4,49 @@
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;
             <span>{{ 'Dashboard' | translate }}</span>
         </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('employees')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Employees' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'employees'">
+                <ul class="submenu">
+                    <li>
+                        <a routerLink="/employee"  href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Create Employee' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/employee/showemployee"  href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Show Employee' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('students')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Students' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'students'">
+                <ul class="submenu">
+                    <li>
+                        <a routerLink="/student"  href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Create student' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/student/showstudent"  href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Show Student' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
         <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
             <span>{{ 'Charts' | translate }}</span>
@@ -147,5 +190,6 @@
     <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
         <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
         <span>{{ 'Collapse Sidebar' | translate }}</span>
+    </div>
     </div>
 </nav>

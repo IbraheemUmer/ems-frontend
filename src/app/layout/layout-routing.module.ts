@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
-
+ 
 const routes: Routes = [
     {
         path: '',
@@ -15,7 +15,13 @@ const routes: Routes = [
             { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
             { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
-            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' }
+            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
+            { path: 'user', loadChildren: './user/user.module#UserModule' },
+            { path: 'practice', loadChildren: './practice/practice.module#PracticeModule' },
+            { path: 'hyper', loadChildren: './hyper/hyper.module#HyperModule' },
+            { path: 'samsung', loadChildren: './samsung/samsung.module#SamsungModule' },
+            { path: 'employee', loadChildren: './employee/employee.module#EmployeeModule' },
+            { path: 'student', loadChildren: './student/student.module#StudentModule' },
         ]
     }
 ];

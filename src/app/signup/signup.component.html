@@ -6,21 +6,41 @@
             <form role="form">
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
+                        <input type="text" name="full_name" [(ngModel)]="user.full_name" class="form-control input-underline input-lg"  placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                    <input name="birth_date" type="date" [(ngModel)]= "user.birth_date" class="form-control input-underline input-lg"  placeholder="birth_date"> <br>
+                    </div>
+                    <form action="">
+                        <input type="radio" name="gender" [(ngModel)]="user.gender" value="male">male <br>
+                        <input type="radio" name="female" [(ngModel)]="user.gender" value="female">female <br>
+                        <input type="radio" name="other" [(ngModel)]="user.gender" value="other">other <br>
+                      </form>
+                      <div class="form-group">
+                        <input name="salary" type="number" [(ngModel)]="user.salary" class="form-control input-underline input-lg"  placeholder="salary"> <br>
+                      </div>
+                      <div class="form-group">
+                        <input name="address" type="text" [(ngModel)]="user.address" class="form-control input-underline input-lg"  placeholder="address"> <br>
+                      </div>
+                      <div class="form-group">
+                        <input name="phone_no" type="text" [(ngModel)]="user.phone_no" class="form-control input-underline input-lg"  placeholder="phone_no"> <br>
+                      </div>
+                      <div class="form-group">
+                        <input name="cnic" type="string" [(ngModel)]="user.cnic" class="form-control input-underline input-lg"  placeholder="cnic"> <br>
+                      </div>
+
+                    <div class="form-group">
+                        <input type="text" name="email" [(ngModel)]="user.email" class="form-control input-underline input-lg" placeholder="email">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password">
+                        <input type="password" name="password" [(ngModel)]="user.password" class="form-control input-underline input-lg"  placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
+                        <input type="password" name="RepeatPassword" [(ngModel)]="user.RepeatPassword"class="form-control input-underline input-lg"  placeholder="RepeatPassword">
                     </div>
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Register </a>&nbsp;
+                <a class="btn rounded-btn" (click)= "register()">Register </a>
                 <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>
             </form>
         </div>

@@ -1,0 +1,17 @@
+.container {
+    overflow-x: auto;
+    // width: 100em;
+    // white-space: nowrap;
+    }
+    
+    // table, th, td {
+    // border: 1px solid black;
+    // }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }

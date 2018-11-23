@@ -1,0 +1,19 @@
+<table>
+  <thead>
+      <tr>
+          <th>tech_department</th>
+          <th>project_managers</th>
+          <th>graphic_designers</th>
+                   
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of users" >
+          <td>{{user.tech_department}}</td>
+          <td>{{user.project_managers}}</td>
+          <td>{{user.graphic_designers}}</td>
+          
+          
+      </tr>
+  </tbody>
+</table>

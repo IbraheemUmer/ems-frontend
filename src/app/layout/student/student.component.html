@@ -1,0 +1,20 @@
+
+<div class="form-group">
+  <h1>Show Data</h1>
+  <label for="email">email</label>
+  <input type="email" name="email"  [(ngModel)]="Student.email" class="form-control"> <br>
+  <label for="password">password</label>
+  <input type="string" name="password" [(ngModel)]="Student.password" class="form-control"> <br>
+  <label for="fname">fname</label>
+  <input name="fname" type="text" [(ngModel)]="Student.fname" class="form-control"> <br>
+  <label for="lname">lname</label>
+  <input name="lname" type="text" [(ngModel)]="Student.lname" class="form-control"> <br>
+  <label for="dob">dob</label>
+  <input name="dob" type="date" [(ngModel)]="Student.dob" class="form-control"> <br>
+  <label for="phone">phone</label>
+  <input name="phone" type="number" [(ngModel)]="Student.phone" class="form-control"> <br>
+  <label for="age">age</label>
+  <input name="age" type="number" [(ngModel)]="Student.age" class="form-control"> <br>
+  
+  <button (click)="createStudent()">Submit</button>
+  </div>  

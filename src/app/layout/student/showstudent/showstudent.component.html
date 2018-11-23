@@ -1,0 +1,35 @@
+<input type="email" name="email" [(ngModel)]="email">
+<button (click)="showstudent()">search</button><br>
+<input type="fname" name="fname" [(ngModel)]="fname">
+<button (click)="showstudent()">search</button>
+<div class="container">
+<table>
+  <thead>
+      <tr>
+          <th>email</th>
+          <th>password</th>
+          <th>fname</th>
+          <th>lname</th>
+          <th>dob</th>
+          <th>phone</th>
+          <th>age</th>
+          <th>update</th>
+         
+      </tr> 
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of users;let i=index" >
+      <td><input type="string" name="email" [(ngModel)]=user.email></td>    
+      <td><input type="string" name="password" [(ngModel)]=user.password></td>    
+      <td><input type="text" name="fname" [(ngModel)]=user.fname></td>    
+      <td><input type="text" name="lname" [(ngModel)]=user.lname></td>    
+      <td><input type="date" name="dob" [(ngModel)]=user.dob></td>    
+      <td><input type="number" name="phone" [(ngModel)]=user.phone></td>    
+     <td><input type="number" name="age" [(ngModel)]=user.age></td>
+     <td><button (click)="updatestudent(i)">update</button></td>
+
+      </tr>
+  </tbody>
+  
+</table>
+</div>
