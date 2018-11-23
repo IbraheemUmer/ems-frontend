@@ -37,7 +37,6 @@ export class ShowemployeeComponent implements OnInit {
     this.users[i].hire_date = new Date(this.users[i].hire_date);
     this.HttpService.updateemployee(this.users[i]).subscribe(
     data => {
-      debugger;
       alert('successfully updated');
     }, 
     err => {
@@ -48,7 +47,6 @@ export class ShowemployeeComponent implements OnInit {
   destroyemployee(i){
     this.HttpService.destroyemployee(this.users[i]).subscribe(
       data => {
-        debugger;
         alert('successfully deleted');
       }, 
       err => {
